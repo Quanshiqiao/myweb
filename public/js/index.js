@@ -2,13 +2,7 @@ var btn = document.getElementsByClassName('nav-link');
 var section = document.getElementsByClassName('section');
 console.log(section);
 console.log(section[0].offsetTop);
-// btn[0].onclick=function () {
-//     console.log(1);
-//     buffer(document.documentElement,section[0].offsetTop,function () {
-//         console.log(2);
-//
-//     })
-// };
+
 for (var i = 0; i < btn.length; i++) {
     (function (i) {
         btn[i].onclick=function () {

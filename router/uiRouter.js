@@ -14,7 +14,7 @@ router.get('/',(request,respon)=>{
 
 //游戏
 router.get('/game',(req,res)=>{
-    let filePaht=resolve(__dirname,'../public/game.html');
+    let filePath=resolve(__dirname,'../public/game.html');
     res.sendFile(filePath)
 });
 

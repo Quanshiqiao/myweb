@@ -55,6 +55,7 @@
 
 </head>
 <body>
+
 <table border="1">
     <tr>
         <td>
@@ -109,6 +110,8 @@
     </tr>
 </table>
 <button id="btn" onclick="daluan()">开 始</button>
+
+<script src="js/axios.min.js"></script>
 <script>
 
     function over(e) {
@@ -170,10 +173,22 @@
 
 
         if (count===9){
-            console.log(time);
+            //浮点数运算不能保证精确值
+            console.log(time.toFixed(2));
             setTimeout(function () {
                 alert("恭喜你拼对了")
-            },200)
+            },200);
+            //发送请求
+            axios.get('/game/test',{
+                params:{
+                    user_name:"路人甲1",
+                    user_value:time.toFixed(2)
+                }
+            }).then(response=>{
+                console.log(response);
+            }).catch((err)=>{
+                console.log(err);
+            })
         }
     }
 

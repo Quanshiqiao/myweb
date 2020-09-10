@@ -64,12 +64,14 @@ header{
 }
     /*底部*/
 #footer{
-    height: 30px;
-    line-height: 30px;
+    padding: 10px 0 5px;
     text-align: center;
     background: #222;
 }
-#footer a{
+#footer a,#footer p{
     text-decoration: none;
     color: #c1c1c1;
+}
+#footer img{
+    margin: -5px 10px 0 10px;
 }

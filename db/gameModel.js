@@ -18,7 +18,7 @@ let gameSchema = new Schema({
         default:"路人甲"
     },
     user_value:{
-        type: String,
+        type: Number,
     },
     date:{
         type:Date,
@@ -27,4 +27,4 @@ let gameSchema = new Schema({
     }
 });
 
-module.exports=mongoose.model('game',gameSchema);
+module.exports=mongoose.model('game1',gameSchema);

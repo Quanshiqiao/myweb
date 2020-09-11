@@ -10,40 +10,48 @@
         }
         body{
             padding: 50px 0 0 50px;
+            height: 100vh;
+
         }
-        div{
+        .container,footer{
+            display: flex;
+            justify-content: center;
+        }
+        footer{
+            padding-top: 10px;
+        }
+        .box,.box1{
             width: 200px;
             height: 200px;
         }
-        .box{
+        .box1{
             background:url("images/game.jpg") no-repeat;
         }
-        #box2{
+        #box12{
             background-position: -200px 0;
         }
-        #box3{
+        #box13{
             background-position: -400px 0;
         }
-        #box4{
+        #box14{
             background-position: 0 -200px;
         }
-        #box5{
+        #box15{
             background-position: -200px -200px;
         }
-        #box6{
+        #box16{
             background-position: -400px -200px;
         }
-        #box7{
+        #box17{
             background-position: 0 -400px;
         }
-        #box8{
+        #box18{
             background-position: -200px -400px;
         }
-        #box9{
+        #box19{
             background-position: -400px -400px;
         }
         #btn{
-            margin: 20px 0 0 200px;
             width: 200px;
             height: 50px;
             font-size: 25px;
@@ -51,169 +59,334 @@
             background-color: black;
             cursor: pointer;
         }
+        .game{
+            width: 280px;
+            position: relative;
+            margin-left: 15px;
+            background: linear-gradient(to bottom,red,green,blue);
+            padding: 10px ;
+        }
+        .game h2{
+            text-align: center;
+        }
+        ul{
+
+        }
+        li:hover{
+            cursor: pointer;
+            opacity: .7;
+        }
+        li{
+            list-style: none;
+            display: flex;
+            height: 25px;
+            line-height: 25px;
+            padding: 2px 0;
+
+        }
+        .li p{
+            text-align: center;
+        }
+        li p{
+            height: 1.5rem;
+            background: aqua;
+            margin: 2px;
+            flex: 2;
+        }
+        ul li p:nth-child(3){
+            flex: 3;
+        }
+        .footer{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 50px;
+            width: 100%;
+        }
+        .footer p{
+            overflow: hidden;
+        }
+        .footer p button{
+            /*margin-top: 2px;*/
+            height: 38px;
+            width: 30%;
+            cursor: pointer;
+        }
+        input{
+            width: 60%;
+            height: 36px;
+            padding-left: 14px;
+            outline:none;
+            margin: 0 5px 0 5px ;
+            border: 0 solid transparent;
+        }
+        input:focus{
+            border: none;
+        }
+
     </style>
 
 </head>
 <body>
 
-<table border="1">
-    <tr>
-        <td>
-            <div ondrop="drop(event)" ondragover="over(event)" id="f1">
-                <div draggable="true" ondragstart="drap(event)" id="box1" class="box"></div>
-            </div>
-        </td>
-        <td>
-            <div ondrop="drop(event)" ondragover="over(event)" id="f2">
-                <div draggable="true" ondragstart="drap(event)" id="box2" class="box"></div>
-            </div>
-        </td>
-        <td>
-            <div ondrop="drop(event)" ondragover="over(event)" id="f3">
-                <div draggable="true" ondragstart="drap(event)" id="box3" class="box"></div>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div ondrop="drop(event)" ondragover="over(event)" id="f4">
-                <div draggable="true" ondragstart="drap(event)" id="box4" class="box"></div>
-            </div>
-        </td>
-        <td>
-            <div ondrop="drop(event)" ondragover="over(event)" id="f5">
-                <div draggable="true" ondragstart="drap(event)" id="box5" class="box"></div>
-            </div>
-        </td>
-        <td>
-            <div ondrop="drop(event)" ondragover="over(event)" id="f6">
-                <div draggable="true" ondragstart="drap(event)" id="box6" class="box"></div>
-            </div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div ondrop="drop(event)" ondragover="over(event)" id="f7">
-                <div draggable="true" ondragstart="drap(event)" id="box7" class="box"></div>
-            </div>
-        </td>
-        <td>
-            <div ondrop="drop(event)" ondragover="over(event)" id="f8">
-                <div draggable="true" ondragstart="drap(event)" id="box8" class="box"></div>
-            </div>
-        </td>
-        <td>
-            <div ondrop="drop(event)" ondragover="over(event)" id="f9">
-                <div draggable="true" ondragstart="drap(event)" id="box9" class="box"></div>
-            </div>
-        </td>
-    </tr>
-</table>
-<button id="btn" onclick="daluan()">开 始</button>
+<section class="container">
+    <table border="1">
+        <tr>
+            <td>
+                <div ondrop="drop(event)" class="box" ondragover="over(event)" id="f1">
+                    <div draggable="true" ondragstart="drap(event)" id="box11" class="box1"></div>
+                </div>
+            </td>
+            <td>
+                <div ondrop="drop(event)" class="box" ondragover="over(event)" id="f2">
+                    <div draggable="true" ondragstart="drap(event)" id="box12" class="box1"></div>
+                </div>
+            </td>
+            <td>
+                <div ondrop="drop(event)" class="box" ondragover="over(event)" id="f3">
+                    <div draggable="true" ondragstart="drap(event)" id="box13" class="box1"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div ondrop="drop(event)" class="box" ondragover="over(event)" id="f4">
+                    <div draggable="true" ondragstart="drap(event)" id="box14" class="box1"></div>
+                </div>
+            </td>
+            <td>
+                <div ondrop="drop(event)" class="box" ondragover="over(event)" id="f5">
+                    <div draggable="true" ondragstart="drap(event)" id="box15" class="box1"></div>
+                </div>
+            </td>
+            <td>
+                <div ondrop="drop(event)" class="box" ondragover="over(event)" id="f6">
+                    <div draggable="true" ondragstart="drap(event)" id="box16" class="box1"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div ondrop="drop(event)" class="box" ondragover="over(event)" id="f7">
+                    <div draggable="true" ondragstart="drap(event)" id="box17" class="box1"></div>
+                </div>
+            </td>
+            <td>
+                <div ondrop="drop(event)" class="box" ondragover="over(event)" id="f8">
+                    <div draggable="true" ondragstart="drap(event)" id="box18" class="box1"></div>
+                </div>
+            </td>
+            <td>
+                <div ondrop="drop(event)" class="box" ondragover="over(event)" id="f9">
+                    <div draggable="true" ondragstart="drap(event)" id="box19" class="box1"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="game">
+        <h2>世界排行榜</h2>
+        <ul >
+            <li class="li"><p>玩家id</p><p>用时</p><p>时间</p></li>
+        </ul>
+        <div class="footer">
+            <p><input type="text" placeholder="输入您的游戏名"><button id="btn2">上传</button></p>
+        </div>
+    </div>
+</section>
+<footer>
+    <button id="btn" onclick="daluan()">开 始</button>
+</footer>
+
 
 <script src="js/axios.min.js"></script>
 <script>
 
-    function over(e) {
-        e.preventDefault();
-    }
+
     var timer=null;
+    var flag=false;
     var time=0;
+    var str="";
 
-    //抓起
-    function drap(e) {
-        var id=e.target.id;
-        e.dataTransfer.setData("id",id);
+
+    //发布按钮
+    var btn2 = document.getElementById('btn2');
+
+    //获取input标签 让用户输入游戏名
+    var input  = document.getElementsByTagName("input")[0]
+
+
+    var ul=document.getElementsByTagName("ul")[0];
+
+
+    //获取前五名的数据
+    function getvalue() {
+        axios.get('/game/value',()=>{
+
+        }).then(response=>{
+            var arr= response.data;
+            console.log(arr);
+            if (arr.length > 0) {
+                for (var i = 0; i < arr.length; i++) {
+                    var li = document.createElement('li');
+                    var p1 = document.createElement('p');
+                    p1.innerText=arr[i].user_name;
+                    var p2 = document.createElement('p');
+                    p2.innerText=arr[i].user_value;
+                    var p3 = document.createElement('p');
+                    p3.innerText=arr[i].date.substr(0, 10);
+                    li.append(p1);
+                    li.append(p2);
+                    li.append(p3);
+                    ul.appendChild(li)
+                }
+
+            }
+        }).catch((err)=>{
+            console.log(err);
+        });
+
     }
-    //放下
-    function drop(e) {
-        // 获取被抓id
-        var zhuaId = e.dataTransfer.getData("id");
-        // 获取方向位置元素的id
-        var fangId = e.target.id;
+
+    //调用获取数据的函数
+    getvalue();
 
 
-        //获取抓的元素 和 放下元素
-        var zhua= document.getElementById(zhuaId);
-        var fang = document.getElementById(fangId);
+       function over(e) {
+           e.preventDefault();
+       }
 
-        //获取元素的父元素
-        var zParent=zhua.parentNode;
-        var fParent=fang.parentNode;
 
-        //替换子元素
-        zParent.appendChild(fang);
-        fParent.appendChild(zhua);
+       //抓起
+       function drap(e) {
+           var id=e.target.id;
+           e.dataTransfer.setData("id",id);
+       }
+       //放下
+       function drop(e) {
+           // 获取被抓id
+           var zhuaId = e.dataTransfer.getData("id");
+           // 获取方向位置元素的id
+           var fangId = e.target.id;
 
-        jiaoyan();
+
+           //获取抓的元素 和 放下元素
+           var zhua= document.getElementById(zhuaId);
+           var fang = document.getElementById(fangId);
+
+           //获取元素的父元素
+           var zParent=zhua.parentNode;
+           var fParent=fang.parentNode;
+
+           //替换子元素
+           zParent.appendChild(fang);
+           fParent.appendChild(zhua);
+
+           jiaoyan();
+
+       }
+
+       //校验 是否拼对
+       function jiaoyan() {
+
+           var count=0;
+           var box1s = document.getElementsByClassName('box1');
+
+           for (var i = 0; i < box1s.length; i ++){
+               var box1 = box1s[i];
+               var fbox1 = box1.parentNode;
+
+               var box1Id = box1.getAttribute("id");
+               var fbox1Id = fbox1.getAttribute("id");
+
+               if (box1Id.replace("box1", "") === fbox1Id.replace("f", "")) {
+                   count++;
+               }else{
+                   return
+               }
+
+
+           }
+           //如果拼对了
+           if (count===9){
+               //浮点数运算不能保证精确值
+               console.log(time.toFixed(2));
+                flag=true;
+               setTimeout(function () {
+                   alert("恭喜你拼对了");
+                   time=0;
+               },200);
+
+
+       }
 
     }
 
-    //校验
-    function jiaoyan() {
 
-        var count=0;
-        var boxs = document.getElementsByClassName('box');
+        //点击开始按钮调用
+        function daluan() {
 
-        for (var i = 0; i < boxs.length; i ++){
-            var box = boxs[i];
-            var fbox = box.parentNode;
+            flag=0;
+            timer=null;
+            time=0;
+            var box1s= document.getElementsByClassName('box1');
 
-            var boxId = box.getAttribute("id");
-            var fboxId = fbox.getAttribute("id");
+            //图片重新排序
+            for (var i = 0; i < 20; i++) {
+                var x = parseInt(Math.random()*9);
+                var y = parseInt(Math.random()*9);
 
-            if (boxId.replace("box", "") === fboxId.replace("f", "")) {
-                count++;
-            }else{
-                return
+                var xbox1=box1s[x].parentNode;
+                var ybox1=box1s[y].parentNode;
+
+                xbox1.appendChild(box1s[y]);
+                ybox1.appendChild(box1s[x]);
             }
 
+            //计时
+            timer=setInterval(function () {
+                time+=0.1;
+            },100)
+
+        }
+
+        //   发布成绩
+        btn2.onclick=function () {
+            //判断是否开始了游戏
+           if (time === 0||flag===false) {
+               alert('您还没有开始游戏')
+           }else {
+               //如果已经完成游戏
+
+               // 获取输入的游戏名
+               str=input.value.trim();
+               if (str.length === 0) {
+                   // 如果游戏名为空
+                   str='神秘人'
+               }else  if (str.length > 4) {
+                   //如果游戏名 长度超过4 截取前四位
+                   str=str.substr(0,4)
+               }
+
+               //发送请求
+                   axios.get('/game/test',{
+                       params:{
+                           user_name:str,
+                           user_value:parseFloat(time.toFixed(2))
+                       }
+                   }).then(response=>{
+                       console.log(response);
+                       alert("成绩上传成功");
+                       location.reload();
+                   }).catch((err)=>{
+                       console.log(err);
+                   })
+           }
 
         }
 
 
-        if (count===9){
-            //浮点数运算不能保证精确值
-            console.log(time.toFixed(2));
-            setTimeout(function () {
-                alert("恭喜你拼对了")
-            },200);
-            //发送请求
-            axios.get('/game/test',{
-                params:{
-                    user_name:"路人甲1",
-                    user_value:time.toFixed(2)
-                }
-            }).then(response=>{
-                console.log(response);
-            }).catch((err)=>{
-                console.log(err);
-            })
-        }
-    }
 
-    function daluan() {
 
-        timer=null;
-        time=0;
-        var boxs= document.getElementsByClassName('box');
-
-        for (var i = 0; i < 20; i++) {
-            var x = parseInt(Math.random()*9);
-            var y = parseInt(Math.random()*9);
-
-            var xbox=boxs[x].parentNode;
-            var ybox=boxs[y].parentNode;
-
-            xbox.appendChild(boxs[y]);
-            ybox.appendChild(boxs[x]);
-        }
-
-        timer=setInterval(function () {
-            time+=0.1;
-        },100)
-
-    }
 
 
 </script>
